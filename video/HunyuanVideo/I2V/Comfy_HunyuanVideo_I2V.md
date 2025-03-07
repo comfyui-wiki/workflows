@@ -2,7 +2,7 @@
 
 Save the image below, then drag and drop to ComfyUI  it to load the corresponding workflow
 
-![Workflow](Comfy_HunyuanVideo_I2V.png)
+![Workflow](Comfy_HunyuanVideo_I2V.webp)
 
 ## Model Download
 Download the following models:
