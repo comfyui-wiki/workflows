@@ -1,3 +1,10 @@
+## Workflow
+
+Save the image below, then drag and drop to ComfyUI  it to load the corresponding workflow
+
+![Workflow](Comfy_HunyuanVideo_I2V.png)
+
+## Model Download
 Download the following models:
 - [llava_llama3_vision.safetensors](https://huggingface.co/Comfy-Org/HunyuanVideo_repackaged/resolve/main/split_files/clip_vision/llava_llama3_vision.safetensors?download=true)
 - [clip_l.safetensors](https://huggingface.co/Comfy-Org/HunyuanVideo_repackaged/resolve/main/split_files/text_encoders/clip_l.safetensors?download=true)
@@ -22,3 +29,12 @@ ComfyUI/
 │   └── diffusion_models/
 │       └── hunyuan_video_image_to_video_720p_bf16.safetensors
 ```
+
+## Input Image
+
+Download the image below as input image
+
+![Input Image](Comfy_HunyuanVideo_I2V_input.png)
+
+
+
