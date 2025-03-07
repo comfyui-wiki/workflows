@@ -1,30 +1,31 @@
 # ComfyUI Wiki Workflows
 🌐 Multilingual Support: [中文](README.zh.md) | [Español](README.es.md) | [Français](README.fr.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
-
-This repository stores all workflow files for [ComfyUI-Wiki.com](https://comfyui-wiki.com/en). Each workflow includes a preview image (with embedded metadata) and a JSON file. Both formats can be dragged directly into ComfyUI for loading.
+This repository contains all workflow files for [ComfyUI-Wiki.com](https://comfyui-wiki.com/zh). Each workflow includes a preview image (with metadata) and JSON file, which can be directly dragged into ComfyUI for loading.
 
 ## Getting Started
 
-### Prerequisites
-- [ComfyUI](https://github.com/comfyanonymous/ComfyUI) installed
-- For new installations, follow the [ComfyUI Wiki Installation Guide](https://comfyui-wiki.com/en/install/install-comfyui)
+After downloading corresponding models, drag them into ComfyUI to load the workflow. Each workflow file contains a readme.md with model download information.
+
+### Requirements
+- Have [ComfyUI](https://github.com/comfyanonymous/ComfyUI) installed
+- New users please refer to [ComfyUI Wiki Installation Guide](https://comfyui-wiki.com/zh/install/install-comfyui)
 
 ## Handling Missing Models
-When loading workflows, ComfyUI will automatically detect and prompt for missing models:
+ComfyUI will automatically detect missing models when loading workflows:
 ![Missing models prompt](/readme_images/missing_models.png)
 
 ### For ComfyUI Desktop Users
-1. Click the download button in the prompt dialog
-2. Important notes:
-   - Only supports models from [CivitAI](https://civitai.com) and [Hugging Face](https://huggingface.co/)
+1. Click the download button in the pop-up window
+2. Notes:
+   - Currently only supports model detection from CivitAI and Hugging Face
    - Ensure network access to these platforms
-   - Unsupported file types (e.g., .pth) will have separate instructions
+   - Unsupported formats like .pth will be recorded in readme.md for manual download
 
-### For Other Versions (Portable/Manual Installations)
-1. Downloaded files will be saved by your browser
-2. Manually move files to corresponding subdirectories in `ComfyUI/models/`
+### For Other Versions
 
-Example structure after setup:
+1. Click the `Download` button to initiate browser download, then manually move files to `ComfyUI/models/`
+
+Example directory structure:
 ```bash
 ComfyUI/
 └── models/
@@ -34,26 +35,27 @@ ComfyUI/
         ├── blindbox_ViMix.safetensors
         └── MoXinV1.safetensors
 ```
-> Restart/refresh ComfyUI after moving files
+> After moving files, please restart/refresh the interface
 
-## Resolving Missing Nodes
+## Handling Missing Nodes
 ![Missing nodes prompt](/readme_images/missing_node_types.png)
 
-### Troubleshooting Steps
-1. **Core nodes missing**: [Update ComfyUI](https://comfyui-wiki.com/en/tutorial/basic/how-to-update-comfyui)
+### Solutions
+1. **Core nodes missing**: [Update ComfyUI](https://comfyui-wiki.com/zh/tutorial/basic/how-to-update-comfyui)
 2. **Custom nodes missing**: Install via ComfyUI Manager
 
-### Installation Guide
-![ComfyUI Manager interface](/readme_images/comfyui_manger.png)
-1. Click the `Manager` button in ComfyUI
+### ComfyUI Manager Installation Guide
+![ComfyUI Manager interface](/readme_images/comfyui_manager.png)
+1. Click the `Manager` button
 2. Select `Install missing nodes`
-3. Click `Install` in the dialog
+3. Click `Install` in the pop-up window
 
-![Node installation demo](/readme_images/install_missing_nodes.jpg)
+![Node installation example](/readme_images/install_missing_nodes.jpg)
 
 ### Important Notes
-- Requires GitHub access for automatic installations
-- Manual installation guide available for restricted networks: [Custom Nodes Installation](https://comfyui-wiki.com/en/install/install-custom-nodes)
-- Workflow-specific node information provided in individual README files
+- Automatic node installation requires GitHub access
+- Restricted network users please refer to [Manual Installation Guide](https://comfyui-wiki.com/zh/install/install-custom-nodes)
+- Each workflow's README provides URLs for custom nodes
 
-> All workflows undergo security checks. Obtain models only from official sources.
+
+by [@ComfyUI-Wiki](https://github.com/comfyui-wiki) | [ComfyUI-Wiki](https://comfyui-wiki.com/zh)

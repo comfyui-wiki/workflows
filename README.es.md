@@ -1,30 +1,32 @@
 # Flujos de trabajo de ComfyUI Wiki
 🌐 Soporte multilingüe: [English](README.md) | [中文](README.zh.md) | [Français](README.fr.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
-Este repositorio almacena todos los archivos de flujo de trabajo para [ComfyUI-Wiki.com](https://comfyui-wiki.com/es). Cada flujo incluye una imagen de vista previa (con metadatos incrustados) y un archivo JSON. Ambos formatos se pueden arrastrar directamente a ComfyUI para cargarlos.
+Este repositorio contiene todos los archivos de flujos de trabajo de [ComfyUI-Wiki.com](https://comfyui-wiki.com/es). Cada flujo incluye una vista previa (con metadatos) y un archivo JSON que se puede arrastrar directamente a ComfyUI.
 
 ## Primeros pasos
 
-### Requisitos previos
+Descargue los modelos correspondientes y arrástrelos a ComfyUI para cargar el flujo de trabajo. Cada archivo de flujo contiene un readme.md con información de descarga del modelo.
+
+### Requisitos del sistema
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI) instalado
-- Para nuevas instalaciones, siga la [Guía de instalación de ComfyUI Wiki](https://comfyui-wiki.com/es/install/install-comfyui)
+- Nuevos usuarios consulten la [guía de instalación de ComfyUI Wiki](https://comfyui-wiki.com/es/install/install-comfyui)
 
 ## Manejo de modelos faltantes
-Al cargar flujos de trabajo, ComfyUI detectará automáticamente y solicitará los modelos faltantes:
+ComfyUI detectará automáticamente los modelos faltantes al cargar flujos:
 ![Aviso de modelos faltantes](/readme_images/missing_models.png)
 
 ### Para usuarios de ComfyUI Desktop
-1. Haga clic en el botón de descarga en el cuadro de diálogo
-2. Notas importantes:
-   - Solo admite modelos de [CivitAI](https://civitai.com) y [Hugging Face](https://huggingface.co/)
-   - Asegúrese de tener acceso a estas plataformas
-   - Los tipos de archivo no compatibles (por ejemplo, .pth) tendrán instrucciones separadas
+1. Haga clic en el botón de descarga en el popup
+2. Notas:
+   - Actualmente solo soporta modelos de CivitAI y Hugging Face
+   - Asegure la conectividad a estas plataformas
+   - Formatos no soportados (.pth) se documentan en readme.md para descarga manual
 
-### Para otras versiones (Portátiles/Instalaciones manuales)
-1. Los archivos descargados se guardarán en su navegador
-2. Mueva manualmente los archivos a los subdirectorios correspondientes en `ComfyUI/models/`
+### Otras versiones
 
-Ejemplo de estructura después de la configuración:
+1. Haga clic en `Download` para iniciar descarga, luego mueva manualmente a `ComfyUI/models/`
+
+Estructura de directorios:
 ```bash
 ComfyUI/
 └── models/
@@ -34,26 +36,26 @@ ComfyUI/
         ├── blindbox_ViMix.safetensors
         └── MoXinV1.safetensors
 ```
-> Reinicie/actualice ComfyUI después de mover los archivos
+> Reinicie/actualice la interfaz después de mover archivos
 
-## Resolución de nodos faltantes
+## Manejo de nodos faltantes
 ![Aviso de nodos faltantes](/readme_images/missing_node_types.png)
 
-### Pasos para solucionar problemas
-1. **Faltan nodos principales**: [Actualice ComfyUI](https://comfyui-wiki.com/es/tutorial/basic/how-to-update-comfyui)
-2. **Faltan nodos personalizados**: Instale a través de ComfyUI Manager
+### Soluciones
+1. **Nodos principales faltantes**: [Actualice ComfyUI](https://comfyui-wiki.com/es/tutorial/basic/how-to-update-comfyui)
+2. **Nodos personalizados faltantes**: Instale mediante ComfyUI Manager
 
-### Guía de instalación
+### Guía de instalación con ComfyUI Manager
 ![Interfaz de ComfyUI Manager](/readme_images/comfyui_manager.png)
-1. Haga clic en el botón `Manager` en ComfyUI
+1. Haga clic en `Manager`
 2. Seleccione `Install missing nodes`
-3. Haga clic en `Install` en el cuadro de diálogo
+3. Haga clic en `Install` en el popup
 
-![Demostración de instalación de nodos](/readme_images/install_missing_nodes.jpg)
+![Ejemplo de instalación](/readme_images/install_missing_nodes.jpg)
 
 ### Notas importantes
-- Requiere acceso a GitHub para instalaciones automáticas
-- Guía de instalación manual disponible para redes restringidas: [Instalación de nodos personalizados](https://comfyui-wiki.com/es/install/install-custom-nodes)
-- La información específica de los nodos se proporciona en los archivos README individuales
+- Requiere acceso a GitHub para instalación automática
+- Usuarios con restricciones consulten [guía de instalación manual](https://comfyui-wiki.com/es/install/install-custom-nodes)
+- Los README de cada flujo contienen URLs de nodos personalizados
 
-> Todos los flujos de trabajo pasan controles de seguridad. Obtenga modelos solo de fuentes oficiales. 
+by [@ComfyUI-Wiki](https://github.com/comfyui-wiki) | [ComfyUI-Wiki](https://comfyui-wiki.com/es)

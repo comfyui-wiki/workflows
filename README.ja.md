@@ -5,26 +5,28 @@
 
 ## セットアップ
 
-### 必要条件
+対応するモデルをダウンロード後、ComfyUIにドラッグして対応するワークフローを読み込むことができます。各ワークフローファイルには、関連モデルのダウンロード情報を記載したreadme.mdが含まれています。
+
+### 環境要件
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI) がインストール済み
-- 新規インストールの場合は[ComfyUI Wikiインストールガイド](https://comfyui-wiki.com/ja/install/install-comfyui)に従ってください
+- 新規ユーザーは[ComfyUI Wikiインストールガイド](https://comfyui-wiki.com/ja/install/install-comfyui)を参照してください
 
 ## 不足モデルの対応
-ワークフロー読み込み時、ComfyUIは自動的に不足モデルを検出し通知します：
+ワークフロー読み込み時、ComfyUIは自動的に不足モデルを検出します：
 ![不足モデル通知](/readme_images/missing_models.png)
 
 ### ComfyUI Desktopユーザー
 1. 通知ダイアログのダウンロードボタンをクリック
 2. 重要事項：
-   - [CivitAI](https://civitai.com)と[Hugging Face](https://huggingface.co/)のモデルのみ対応
+   - 現在CivitAIとHugging Faceのモデルのみ対応
    - 各プラットフォームへのネットワーク接続を確認
-   - 非対応ファイル形式（例：.pth）は別途案内あり
+   - .pth形式など非対応ファイルはreadme.mdに手動手順を記載
 
-### その他バージョン（ポータブル/手動インストール）
-1. ブラウザに保存されたダウンロードファイルを確認
-2. `ComfyUI/models/`の適切なサブディレクトリに手動で移動
+### その他バージョン
+1. `Download`ボタンでブラウザからファイルをダウンロード
+2. ダウンロード完了後、手動で`ComfyUI/models/`に移動
 
-設定後のディレクトリ例：
+ディレクトリ構造例：
 ```bash
 ComfyUI/
 └── models/
@@ -39,21 +41,21 @@ ComfyUI/
 ## 不足ノードの解決
 ![不足ノード通知](/readme_images/missing_node_types.png)
 
-### トラブルシューティング手順
+### 解決方法
 1. **コアノード不足**: [ComfyUIの更新](https://comfyui-wiki.com/ja/tutorial/basic/how-to-update-comfyui)
-2. **カスタムノード不足**: ComfyUI Manager経由でインストール
+2. **カスタムノード不足**: ComfyUI Managerでインストール
 
-### インストールガイド
-![ComfyUI Managerインターフェース](/readme_images/comfyui_manager.png)
-1. ComfyUIの`Manager`ボタンをクリック
+### ComfyUI Manager操作手順
+![ComfyUI Manager画面](/readme_images/comfyui_manager.png)
+1. `Manager`ボタンをクリック
 2. `Install missing nodes`を選択
-3. ダイアログで`Install`をクリック
+3. ポップアップで`Install`をクリック
 
-![ノードインストールデモ](/readme_images/install_missing_nodes.jpg)
+![ノードインストール例](/readme_images/install_missing_nodes.jpg)
 
-### 重要事項
+### 重要注意事項
 - 自動インストールにはGitHubへのアクセスが必要
-- 制限ネットワーク環境向け手動インストールガイド: [カスタムノードのインストール](https://comfyui-wiki.com/ja/install/install-custom-nodes)
-- 各ワークフロー固有のノード情報は個別READMEファイルに記載
+- ネットワーク制限環境の場合は[手動インストールガイド](https://comfyui-wiki.com/ja/install/install-custom-nodes)を参照
+- 各ワークフローのREADMEにカスタムノードURLを記載
 
-> 全ワークフローはセキュリティチェックを通過しています。モデルは公式ソースからのみ入手してください。 
+by [@ComfyUI-Wiki](https://github.com/comfyui-wiki) | [ComfyUI-Wiki](https://comfyui-wiki.com/ja)
