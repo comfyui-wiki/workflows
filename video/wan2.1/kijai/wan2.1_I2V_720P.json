@@ -142,10 +142,17 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "WanVideoVAELoader"
+        "Node name for S&R": "WanVideoVAELoader",
+        "models": [
+          {
+            "name": "Wan2_1_VAE_bf16.safetensors",
+            "url": "https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan2_1_VAE_bf16.safetensors?download=true",
+            "directory": "vae"
+          }
+        ]
       },
       "widgets_values": [
-        "wan_2.1_vae.safetensors",
+        "Wan2_1_VAE_bf16.safetensors",
         "bf16"
       ],
       "color": "#322",
@@ -261,7 +268,14 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "LoadWanVideoT5TextEncoder"
+        "Node name for S&R": "LoadWanVideoT5TextEncoder",
+        "models": [
+          {
+            "name": "umt5-xxl-enc-bf16.safetensors",
+            "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/umt5-xxl-enc-bf16.safetensors?download=true",
+            "directory": "text_encoders"
+          }
+        ]
       },
       "widgets_values": [
         "umt5-xxl-enc-bf16.safetensors",
@@ -297,7 +311,14 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPVisionLoader"
+        "Node name for S&R": "CLIPVisionLoader",
+        "models": [
+          {
+            "name": "clip_vision_h.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors?download=true",
+            "directory": "clip_vision"
+          }
+        ]
       },
       "widgets_values": [
         "clip_vision_h.safetensors"
@@ -385,7 +406,14 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "WanVideoModelLoader"
+        "Node name for S&R": "WanVideoModelLoader",
+        "models": [
+          {
+            "name": "Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors",
+            "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors?download=true",
+            "directory": "diffusion_models"
+          }
+        ]
       },
       "widgets_values": [
         "Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors",

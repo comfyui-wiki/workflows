@@ -53,10 +53,17 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "WanVideoVAELoader"
+        "Node name for S&R": "WanVideoVAELoader",
+        "models": [
+          {
+            "name": "Wan2_1_VAE_bf16.safetensors",
+            "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.safetensors?download=true",
+            "directory": "vae"
+          }
+        ]
       },
       "widgets_values": [
-        "wan_2.1_vae.safetensors",
+        "Wan2_1_VAE_bf16.safetensors",
         "bf16"
       ],
       "color": "#322",
@@ -88,7 +95,14 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "LoadWanVideoT5TextEncoder"
+        "Node name for S&R": "LoadWanVideoT5TextEncoder",
+        "models": [
+          {
+            "name": "umt5-xxl-enc-bf16.safetensors",
+            "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/umt5-xxl-enc-bf16.safetensors?download=true",
+            "directory": "text_encoders"
+          }
+        ]
       },
       "widgets_values": [
         "umt5-xxl-enc-bf16.safetensors",
@@ -307,10 +321,17 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "WanVideoModelLoader"
+        "Node name for S&R": "WanVideoModelLoader",
+        "models": [
+          {
+            "name": "Wan2_1-T2V-1_3B_bf16.safetensors",
+            "url": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-T2V-1_3B_bf16.safetensors?download=true",
+            "directory": "diffusion_models"
+          }
+        ]
       },
       "widgets_values": [
-        "wan2.1_t2v_1.3B_fp16.safetensors",
+        "Wan2_1-T2V-1_3B_bf16.safetensorss",
         "fp16",
         "disabled",
         "offload_device",

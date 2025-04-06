@@ -7,14 +7,8 @@
     {
       "id": 37,
       "type": "UNETLoader",
-      "pos": [
-        20,
-        -30
-      ],
-      "size": [
-        346.7470703125,
-        82
-      ],
+      "pos": [20, -30],
+      "size": [346.7470703125, 82],
       "flags": {},
       "order": 0,
       "mode": 0,
@@ -24,9 +18,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "slot_index": 0,
-          "links": [
-            94
-          ]
+          "links": [94]
         }
       ],
       "properties": {
@@ -39,24 +31,15 @@
           }
         ]
       },
-      "widgets_values": [
-        "wan2.1_t2v_1.3B_fp16.safetensors",
-        "default"
-      ],
+      "widgets_values": ["wan2.1_t2v_1.3B_fp16.safetensors", "default"],
       "color": "#322",
       "bgcolor": "#533"
     },
     {
       "id": 48,
       "type": "ModelSamplingSD3",
-      "pos": [
-        440,
-        -30
-      ],
-      "size": [
-        210,
-        58
-      ],
+      "pos": [440, -30],
+      "size": [210, 58],
       "flags": {},
       "order": 4,
       "mode": 0,
@@ -72,29 +55,19 @@
           "name": "MODEL",
           "type": "MODEL",
           "slot_index": 0,
-          "links": [
-            95
-          ]
+          "links": [95]
         }
       ],
       "properties": {
         "Node name for S&R": "ModelSamplingSD3"
       },
-      "widgets_values": [
-        8
-      ]
+      "widgets_values": [8]
     },
     {
       "id": 3,
       "type": "KSampler",
-      "pos": [
-        870,
-        50
-      ],
-      "size": [
-        315,
-        262
-      ],
+      "pos": [870, 50],
+      "size": [315, 262],
       "flags": {},
       "order": 7,
       "mode": 0,
@@ -125,9 +98,7 @@
           "name": "LATENT",
           "type": "LATENT",
           "slot_index": 0,
-          "links": [
-            35
-          ]
+          "links": [35]
         }
       ],
       "properties": {
@@ -146,14 +117,8 @@
     {
       "id": 38,
       "type": "CLIPLoader",
-      "pos": [
-        20,
-        100
-      ],
-      "size": [
-        330,
-        100
-      ],
+      "pos": [20, 100],
+      "size": [330, 100],
       "flags": {},
       "order": 1,
       "mode": 0,
@@ -163,10 +128,7 @@
           "name": "CLIP",
           "type": "CLIP",
           "slot_index": 0,
-          "links": [
-            74,
-            75
-          ]
+          "links": [74, 75]
         }
       ],
       "properties": {
@@ -190,14 +152,8 @@
     {
       "id": 39,
       "type": "VAELoader",
-      "pos": [
-        20,
-        250
-      ],
-      "size": [
-        330,
-        60
-      ],
+      "pos": [20, 250],
+      "size": [330, 60],
       "flags": {},
       "order": 2,
       "mode": 0,
@@ -207,9 +163,7 @@
           "name": "VAE",
           "type": "VAE",
           "slot_index": 0,
-          "links": [
-            76
-          ]
+          "links": [76]
         }
       ],
       "properties": {
@@ -222,23 +176,15 @@
           }
         ]
       },
-      "widgets_values": [
-        "wan_2.1_vae.safetensors"
-      ],
+      "widgets_values": ["wan_2.1_vae.safetensors"],
       "color": "#322",
       "bgcolor": "#533"
     },
     {
       "id": 40,
       "type": "EmptyHunyuanLatentVideo",
-      "pos": [
-        30,
-        390
-      ],
-      "size": [
-        340,
-        130
-      ],
+      "pos": [30, 390],
+      "size": [340, 130],
       "flags": {},
       "order": 3,
       "mode": 0,
@@ -248,34 +194,21 @@
           "name": "LATENT",
           "type": "LATENT",
           "slot_index": 0,
-          "links": [
-            91
-          ]
+          "links": [91]
         }
       ],
       "properties": {
         "Node name for S&R": "EmptyHunyuanLatentVideo"
       },
-      "widgets_values": [
-        832,
-        480,
-        33,
-        1
-      ],
+      "widgets_values": [832, 480, 33, 1],
       "color": "#322",
       "bgcolor": "#533"
     },
     {
       "id": 8,
       "type": "VAEDecode",
-      "pos": [
-        870,
-        380
-      ],
-      "size": [
-        210,
-        46
-      ],
+      "pos": [870, 380],
+      "size": [210, 46],
       "flags": {},
       "order": 8,
       "mode": 0,
@@ -296,10 +229,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "slot_index": 0,
-          "links": [
-            56,
-            93
-          ]
+          "links": [56, 93]
         }
       ],
       "properties": {
@@ -310,14 +240,8 @@
     {
       "id": 28,
       "type": "SaveAnimatedWEBP",
-      "pos": [
-        1270,
-        50
-      ],
-      "size": [
-        600,
-        460
-      ],
+      "pos": [1270, 50],
+      "size": [600, 460],
       "flags": {},
       "order": 9,
       "mode": 0,
@@ -330,25 +254,13 @@
       ],
       "outputs": [],
       "properties": {},
-      "widgets_values": [
-        "ComfyUI",
-        16,
-        false,
-        90,
-        "default"
-      ]
+      "widgets_values": ["ComfyUI", 16, false, 90, "default"]
     },
     {
       "id": 47,
       "type": "SaveWEBM",
-      "pos": [
-        1280,
-        570
-      ],
-      "size": [
-        330,
-        312.3846130371094
-      ],
+      "pos": [1280, 570],
+      "size": [330, 312.3846130371094],
       "flags": {
         "collapsed": false
       },
@@ -367,24 +279,13 @@
         "cnr_id": "comfy-core",
         "ver": "0.3.26"
       },
-      "widgets_values": [
-        "video/wan2.1",
-        "vp9",
-        24.000000000000004,
-        32
-      ]
+      "widgets_values": ["video/wan2.1", "vp9", 24.000000000000004, 32]
     },
     {
       "id": 6,
       "type": "CLIPTextEncode",
-      "pos": [
-        450,
-        90
-      ],
-      "size": [
-        340,
-        120
-      ],
+      "pos": [450, 90],
+      "size": [340, 120],
       "flags": {},
       "order": 5,
       "mode": 0,
@@ -400,9 +301,7 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "slot_index": 0,
-          "links": [
-            46
-          ]
+          "links": [46]
         }
       ],
       "title": "CLIP Text Encode (Positive Prompt)",
@@ -418,14 +317,8 @@
     {
       "id": 7,
       "type": "CLIPTextEncode",
-      "pos": [
-        460,
-        250
-      ],
-      "size": [
-        340,
-        100
-      ],
+      "pos": [460, 250],
+      "size": [340, 100],
       "flags": {},
       "order": 6,
       "mode": 0,
@@ -441,9 +334,7 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "slot_index": 0,
-          "links": [
-            52
-          ]
+          "links": [52]
         }
       ],
       "title": "CLIP Text Encode (Negative Prompt)",
@@ -458,105 +349,23 @@
     }
   ],
   "links": [
-    [
-      35,
-      3,
-      0,
-      8,
-      0,
-      "LATENT"
-    ],
-    [
-      46,
-      6,
-      0,
-      3,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      52,
-      7,
-      0,
-      3,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      56,
-      8,
-      0,
-      28,
-      0,
-      "IMAGE"
-    ],
-    [
-      74,
-      38,
-      0,
-      6,
-      0,
-      "CLIP"
-    ],
-    [
-      75,
-      38,
-      0,
-      7,
-      0,
-      "CLIP"
-    ],
-    [
-      76,
-      39,
-      0,
-      8,
-      1,
-      "VAE"
-    ],
-    [
-      91,
-      40,
-      0,
-      3,
-      3,
-      "LATENT"
-    ],
-    [
-      93,
-      8,
-      0,
-      47,
-      0,
-      "IMAGE"
-    ],
-    [
-      94,
-      37,
-      0,
-      48,
-      0,
-      "MODEL"
-    ],
-    [
-      95,
-      48,
-      0,
-      3,
-      0,
-      "MODEL"
-    ]
+    [35, 3, 0, 8, 0, "LATENT"],
+    [46, 6, 0, 3, 1, "CONDITIONING"],
+    [52, 7, 0, 3, 2, "CONDITIONING"],
+    [56, 8, 0, 28, 0, "IMAGE"],
+    [74, 38, 0, 6, 0, "CLIP"],
+    [75, 38, 0, 7, 0, "CLIP"],
+    [76, 39, 0, 8, 1, "VAE"],
+    [91, 40, 0, 3, 3, "LATENT"],
+    [93, 8, 0, 47, 0, "IMAGE"],
+    [94, 37, 0, 48, 0, "MODEL"],
+    [95, 48, 0, 3, 0, "MODEL"]
   ],
   "groups": [
     {
       "id": 1,
       "title": "Load models",
-      "bounding": [
-        10,
-        -100,
-        360,
-        430
-      ],
+      "bounding": [10, -100, 360, 430],
       "color": "#3f789e",
       "font_size": 24,
       "flags": {}
@@ -566,10 +375,7 @@
   "extra": {
     "ds": {
       "scale": 0.839054528882439,
-      "offset": [
-        173.82027100712344,
-        171.24661681774091
-      ]
+      "offset": [173.82027100712344, 171.24661681774091]
     },
     "node_versions": {
       "comfy-core": "0.3.27"
