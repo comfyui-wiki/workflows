@@ -1,68 +1,9 @@
 {
   "id": "e7533930-2792-43a9-b4b5-ded4617d8a43",
   "revision": 0,
-  "last_node_id": 61,
-  "last_link_id": 123,
+  "last_node_id": 64,
+  "last_link_id": 130,
   "nodes": [
-    {
-      "id": 3,
-      "type": "KSampler",
-      "pos": [
-        1330,
-        80
-      ],
-      "size": [
-        315,
-        262
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 121
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 115
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 116
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 117
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "slot_index": 0,
-          "links": [
-            35
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        373349943368304,
-        "randomize",
-        20,
-        6,
-        "uni_pc",
-        "simple",
-        1
-      ]
-    },
     {
       "id": 8,
       "type": "VAEDecode",
@@ -133,7 +74,8 @@
         16,
         false,
         90,
-        "default"
+        "default",
+        ""
       ]
     },
     {
@@ -171,175 +113,6 @@
       ]
     },
     {
-      "id": 37,
-      "type": "UNETLoader",
-      "pos": [
-        20,
-        70
-      ],
-      "size": [
-        346.7470703125,
-        82
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "slot_index": 0,
-          "links": [
-            110
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UNETLoader",
-        "models": [
-          {
-            "name": "wan2.1_i2v_720p_14B_bf16.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_i2v_720p_14B_bf16.safetensors?download=true",
-            "directory": "diffusion_models"
-          }
-        ]
-      },
-      "widgets_values": [
-        "wan2.1_i2v_720p_14B_bf16.safetensors",
-        "default"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 38,
-      "type": "CLIPLoader",
-      "pos": [
-        20,
-        190
-      ],
-      "size": [
-        350,
-        98
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "slot_index": 0,
-          "links": [
-            74,
-            75
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPLoader",
-        "models": [
-          {
-            "name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors?download=true",
-            "directory": "text_encoders"
-          }
-        ]
-      },
-      "widgets_values": [
-        "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
-        "wan",
-        "default"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 49,
-      "type": "CLIPVisionLoader",
-      "pos": [
-        20,
-        440
-      ],
-      "size": [
-        350,
-        60
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP_VISION",
-          "type": "CLIP_VISION",
-          "slot_index": 0,
-          "links": [
-            94
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPVisionLoader",
-        "models": [
-          {
-            "name": "clip_vision_h.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors?download=true",
-            "directory": "clip_vision"
-          }
-        ]
-      },
-      "widgets_values": [
-        "clip_vision_h.safetensors"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 6,
-      "type": "CLIPTextEncode",
-      "pos": [
-        510,
-        170
-      ],
-      "size": [
-        422.84503173828125,
-        164.31304931640625
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 74
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            112
-          ]
-        }
-      ],
-      "title": "CLIP Text Encode (Positive Prompt)",
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "The Little Prince, fox, simple poses, gentle movement, Van Gogh style, starry sky, glowing stars, soft focus, dreamy bokeh, fluffy felt textures, vibrant colors, magical lighting, warm glow, minimalistic action, subtle animation, flowing yellow scarf, peaceful atmosphere, glowing lights, 3D felt figurines, enchanting fantasy, serene, soft swirling vortex",
-        true
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 7,
       "type": "CLIPTextEncode",
       "pos": [
@@ -375,95 +148,10 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "Fast movement, chaotic, complex actions, modern, technology, industrial, harsh lighting, dark, dystopian, unrefined, unnatural, flat, lifeless, no star effect",
-        true
+        "Fast movement, chaotic, complex actions, modern, technology, industrial, harsh lighting, dark, dystopian, unrefined, unnatural, flat, lifeless, no star effect"
       ],
       "color": "#323",
       "bgcolor": "#535"
-    },
-    {
-      "id": 39,
-      "type": "VAELoader",
-      "pos": [
-        20,
-        330
-      ],
-      "size": [
-        350,
-        60
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "slot_index": 0,
-          "links": [
-            76,
-            114
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader",
-        "models": [
-          {
-            "name": "wan_2.1_vae.safetensors",
-            "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors?download=true",
-            "directory": "vae"
-          }
-        ]
-      },
-      "widgets_values": [
-        "wan_2.1_vae.safetensors"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 52,
-      "type": "LoadImage",
-      "pos": [
-        20,
-        610
-      ],
-      "size": [
-        340,
-        326
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "slot_index": 0,
-          "links": [
-            109,
-            118
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "slot_index": 1,
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "The Little Prince.png",
-        "image"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
     },
     {
       "id": 51,
@@ -578,14 +266,367 @@
       ],
       "properties": {
         "Node name for S&R": "CFGZeroStar"
-      }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 52,
+      "type": "LoadImage",
+      "pos": [
+        20,
+        610
+      ],
+      "size": [
+        340,
+        326
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            109,
+            118
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "slot_index": 1,
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "input.webp",
+        "image",
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 37,
+      "type": "UNETLoader",
+      "pos": [
+        20,
+        70
+      ],
+      "size": [
+        346.7470703125,
+        82
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            110
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader",
+        "models": [
+          {
+            "name": "Wan2.1-Fun-1.3B-Control.safetensors",
+            "url": "https://huggingface.co/alibaba-pai/Wan2.1-Fun-1.3B-Control/blob/main/diffusion_pytorch_model.safetensors?download=true",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "Wan2.1-Fun-1.3B-Control.safetensors",
+        "default"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 38,
+      "type": "CLIPLoader",
+      "pos": [
+        20,
+        190
+      ],
+      "size": [
+        350,
+        98
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "slot_index": 0,
+          "links": [
+            74,
+            75
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader",
+        "models": [
+          {
+            "name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors?download=true",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "wan",
+        "default"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 39,
+      "type": "VAELoader",
+      "pos": [
+        20,
+        330
+      ],
+      "size": [
+        350,
+        60
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "slot_index": 0,
+          "links": [
+            76,
+            114
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader",
+        "models": [
+          {
+            "name": "wan_2.1_vae.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors?download=true",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "wan_2.1_vae.safetensors"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 49,
+      "type": "CLIPVisionLoader",
+      "pos": [
+        20,
+        440
+      ],
+      "size": [
+        350,
+        60
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "slot_index": 0,
+          "links": [
+            94
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPVisionLoader",
+        "models": [
+          {
+            "name": "clip_vision_h.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors?download=true",
+            "directory": "clip_vision"
+          }
+        ]
+      },
+      "widgets_values": [
+        "clip_vision_h.safetensors"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        1330,
+        80
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 121
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 115
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 116
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 117
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            35
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        611763850759009,
+        "randomize",
+        20,
+        6,
+        "uni_pc",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        510,
+        170
+      ],
+      "size": [
+        422.84503173828125,
+        164.31304931640625
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 74
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            112
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "A pure girl in her twenties, with flowing long hair, fair skin like jade, big watery eyes, wearing youthful casual clothes, is dancing gracefully in the morning light, just like an elf in a fairy tale."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 58,
+      "type": "LoadImage",
+      "pos": [
+        30,
+        1040
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            130
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "openpose.webp",
+        "image",
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
     },
     {
       "id": 55,
       "type": "WanFunControlToVideo",
       "pos": [
-        952.4044799804688,
-        168.59886169433594
+        950,
+        170
       ],
       "size": [
         342.5999755859375,
@@ -626,7 +667,7 @@
           "name": "control_video",
           "shape": 7,
           "type": "IMAGE",
-          "link": 122
+          "link": 130
         }
       ],
       "outputs": [
@@ -658,46 +699,8 @@
       "widgets_values": [
         512,
         512,
-        81,
+        49,
         1
-      ]
-    },
-    {
-      "id": 58,
-      "type": "LoadImage",
-      "pos": [
-        32.16960906982422,
-        1024.003173828125
-      ],
-      "size": [
-        315,
-        314
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            122
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "back (1).jpg",
-        "image",
-        ""
       ]
     }
   ],
@@ -855,7 +858,7 @@
       "MODEL"
     ],
     [
-      122,
+      130,
       58,
       0,
       55,
@@ -894,8 +897,8 @@
       "id": 3,
       "title": "ControlVideo",
       "bounding": [
-        13.786885261535645,
-        950.8922729492188,
+        10,
+        970,
         367.92266845703125,
         397.732177734375
       ],
@@ -907,15 +910,19 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.8071485178245934,
+      "scale": 0.7513148009015786,
       "offset": [
-        33.57056502011562,
-        -315.87471355483103
+        -172.80817102886112,
+        182.87418587433788
       ]
     },
     "node_versions": {
       "comfy-core": "0.3.27"
-    }
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
   },
   "version": 0.4
 }
