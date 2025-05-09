@@ -1,0 +1,13 @@
+.next
+node_modules
+.htaccess
+todo
+.env.local
+bak/
+.bak/
+.vscode/
+.ENV
+out/
+.DS_Store
+.drafts/
+.ref/
